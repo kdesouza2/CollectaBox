@@ -59,7 +59,7 @@ function profilePicPath(id) {
 app.use(express.json());
 app.use(cookieParser());
 startTokenCleanup();
-app.use(express.static("public"));
+app.use(express.static(path.join(__dirname, "public")));
 
 // Page middleware: redirects to login instead of returning JSON,
 // and exposes the session as `user` in every EJS template.
